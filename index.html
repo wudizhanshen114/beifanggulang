@@ -5,17 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>北方孤狼的牛逼网站</title>
     <style>
-      body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f0f2f5; }
-      h1 { color: #333; }
-      p { color: #666; font-size: 18px; }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body { 
+        font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; 
+        text-align: center; 
+        background-color: #000000; 
+        color: #f5f5f7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .content-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      h1 { 
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      p { 
+        color: #86868b; 
+        font-size: 19px; 
+        line-height: 1.6;
+        font-weight: 400;
+        letter-spacing: -0.003em;
+        max-width: 640px;
+      }
+
+      footer { 
+        background-color: #161617;
+        border-top: 1px solid #333336;
+        padding: 32px 20px; 
+      }
+
+      footer p { 
+        font-size: 12px; 
+        color: #86868b;
+        max-width: 100%;
+      }
     </style>
   </head>
   <body>
-    <h1>🎉 欢迎来到北方孤狼的个人网站</h1>
-    <p>不要问为什么只有index，其他内容还在建设中（某个来自香港的特异人士让我在网页上加上他的大名，然而无人在意）</p>
-    <footer style="margin-top: 80px; padding: 20px 0; text-align: center; color: #a0a0a0; font-size: 14px; line-height: 1.6;">
+    <div class="content-wrapper">
+      <h1>🎉 欢迎来到北方孤狼的个人网站</h1>
+      <p>不要问为什么只有index，其他内容还在建设中（某个来自香港的特异人士让我在网页上加上他的大名，然而无人在意）</p>
+    </div>
+
+    <footer>
       <p style="margin: 0;">感谢 GitHub 和 Cloudflare 提供的技术支持</p>
-      <p style="margin: 5px 0 0 0;">作者 QQ：873253482</p>
+      <p style="margin: 6px 0 0 0;">作者 QQ：873253482</p>
     </footer>
   </body>
 </html>
