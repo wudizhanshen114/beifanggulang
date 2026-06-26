@@ -5,25 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>北方孤狼的牛逼网站</title>
     <style>
-      body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f0f2f5; }
+      /* 消除浏览器默认边距 */
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body { 
+        font-family: Arial, sans-serif; 
+        text-align: center; 
+        background-color: #f0f2f5; 
+        
+        /* 核心改动 1：让 body 变成一个占满全屏高度的垂直弹性盒子 */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; 
+      }
+
+      /* 核心改动 2：主内容区域自动撑开，把页脚“挤”到最底下 */
+      .main-content {
+        flex: 1;
+        padding-top: 50px; /* 代替原本 body 的 margin-top */
+      }
+
       h1 { color: #333; }
       p { color: #666; font-size: 18px; }
 
-      /* ================= 新增页脚栏样式 ================= */
+      /* 页脚栏样式（保持垂直居中） */
       footer {
-        margin-top: 80px;
         padding: 15px 20px;
-        background-color: #ffffff; /* 给页脚一个白色背景，使其真正“单独划一栏” */
-        border-top: 1px solid #e0e0e0; /* 加一条淡淡的顶边线，更有分栏感 */
+        background-color: #ffffff; /* 白色背景分栏 */
+        border-top: 1px solid #e0e0e0; /* 顶边线 */
         
-        /* 核心：通过 Flexbox 实现垂直居中 */
+        /* 页脚内部：两个文字块水平并排 + 垂直居中 */
         display: flex;
         justify-content: center; /* 水平居中 */
         align-items: center;     /* 垂直居中 */
         gap: 40px;               /* 两个文字块之间的左右间距 */
       }
       
-      /* 重置页脚内 p 标签的默认边距，确保垂直居中不被干扰 */
+      /* 清除页脚内 p 标签的默认边距，确保垂直居中精准 */
       footer p {
         margin: 0 !important; 
         color: #a0a0a0;
@@ -32,12 +54,16 @@
     </style>
   </head>
   <body>
-    <h1>🎉 欢迎来到北方孤狼的个人网站</h1>
-    <p>不要问为什么只有index，其他内容还在建设中（某个来自香港的特异人士让我在网页上加上他的大名，然而无人在意）</p>
+
+    <div class="main-content">
+      <h1>🎉 欢迎来到北方孤狼的个人网站</h1>
+      <p>不要问为什么只有index，其他内容还在建设中（某个来自香港的特异人士让我在网页上加上他的大名，然而无人在意）</p>
+    </div>
     
     <footer>
       <p>感谢 GitHub 和 Cloudflare 提供的技术支持</p>
       <p>作者 QQ：873253482</p>
     </footer>
+
   </body>
 </html>
